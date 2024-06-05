@@ -1,34 +1,38 @@
-#include<bits/stdc++.h>
+ #include <bits/stdc++.h>
 using namespace std;
-int main(){
-int n;
-int counter=1;
-cout<<"Enter Number:";
-cin>>n;
-int i=1;
-while(i<=n){
-int space=n-i;
-while(space>0){
-cout<<" ";
-space=space-1;
 
+int main() {
+    int n;
+    cout << "Enter Number: ";
+    cin >> n;
+    int i = 1;
 
-}
+    // Print the pattern
+    while (i <= n) {
+        // Print spaces
+        int space = n - i;
+        while (space > 0) {
+            cout << " ";
+            space--;
+        }
 
-int j=1;
-while(j<=i){
- cout<<counter;
- counter++;
- j=j+1;
+        // Print the first part of numbers (increasing sequence)
+        int j = 1;
+        while (j <= i) {
+            cout << j << " ";
+            j++;
+        }
 
-}
-cout<<endl;
-i=i+1;
+        // Print the second part of numbers (decreasing sequence)
+        int k = i - 1;
+        while (k >= 1) {
+            cout << k << " ";
+            k--;
+        }
 
-}
-
-
-
+        cout << endl;
+        i++;
+    }
 
     return 0;
 }
